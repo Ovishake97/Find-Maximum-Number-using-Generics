@@ -68,5 +68,37 @@ namespace MSTest
             //Assert
             expected.Equals(actual);
         }
+        /// Doing the same use cases
+        /// as above in case of string parameters
+        //TC 3.1
+        [TestMethod]
+        public void GivenAtFirstPositionReturnsFirst_String()
+        {   //Arrange
+            string expected = "50";
+            //Act
+            float actual = FindMaximum.GenericMethod.GetMaximumFloat(50, 20, 30);
+            //Assert
+            expected.Equals(actual);
+        }
+        //TC 3.2
+        [TestMethod]
+        public void GivenAtSecondPositionReturnsSecond_String()
+        {   //Arrange
+            string expected = "50";
+            //Act
+            string actual = FindMaximum.GenericMethod.GetMaximumString("20", "50", "30");
+            //Assert
+            expected.Equals(actual);
+        }
+        //TC 3.3
+        [TestMethod]
+        public void GivenAtThirdPositionReturnsThird_String()
+        {   //Arrange
+            string expected = "50";
+            //Act
+            string actual = FindMaximum.GenericMethod.GetMaximumString("20", "30", "50");
+            //Assert
+            expected.Equals(actual);
+        }
     }
 }
