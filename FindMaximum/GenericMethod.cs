@@ -25,7 +25,6 @@ namespace FindMaximum
         /// and give the maximum out of them
         /// by returning the first value out of the sorted array
         public static T TestMaximum(T[] values) {
-            Console.WriteLine("Maximum number is:");
             var sorted = SortedValues(values);
             return sorted[^1];
         }
@@ -35,6 +34,11 @@ namespace FindMaximum
         {
             T max = GenericMethod<T>.TestMaximum(this.values);
             return max;
+        }
+        /// Defining a method to print the maximum value
+        /// by invoking the TestMaximum method
+        public void PrintMax() {
+            Console.WriteLine("Maximum value is " +TestMaximum());
         }
     }
 }
