@@ -10,6 +10,7 @@ namespace FindMaximum
         {
             Console.WriteLine(GenericMethod.GetMaximumInt(20, 30, 50));
             Console.WriteLine(GenericMethod.GetMaximumFloat(20,30,50));
+            Console.WriteLine(GenericMethod.GetMaximumString("20","30","50"));
             Console.ReadKey();
         }
     }
