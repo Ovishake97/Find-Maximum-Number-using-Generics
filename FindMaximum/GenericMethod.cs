@@ -28,5 +28,28 @@ namespace FindMaximum
                 throw new Exception("Two or more of the entered numbers are same");
             }
         }
+        /// Implementating the same method as asked
+        /// in UC2 in order to accommodate
+        /// float parameters in lieu of integers
+        public static float GetMaximumFloat(float num1, float num2, float num3)
+        {
+            Console.WriteLine("Maximum number is:");
+            if (num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0)
+            {
+                return num1;
+            }
+            else if (num2.CompareTo(num3) > 0 && num2.CompareTo(num1) > 0)
+            {
+                return num2;
+            }
+            else if (num3.CompareTo(num1) > 0 && num3.CompareTo(num2) > 0)
+            {
+                return num3;
+            }
+            else
+            {
+                throw new Exception("Two or more of the entered numbers are same");
+            }
+        }
     }
 }
