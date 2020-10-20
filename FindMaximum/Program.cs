@@ -4,13 +4,12 @@ namespace FindMaximum
 {
     class Program
     {
-    ///Invoking the methods defined  
+    ///Invoking the generic method defined  
     /// to calculate the maximun number
         static void Main(string[] args)
         {
-            Console.WriteLine(GenericMethod.GetMaximumInt(20, 30, 50));
-            Console.WriteLine(GenericMethod.GetMaximumFloat(20,30,50));
-            Console.WriteLine(GenericMethod.GetMaximumString("20","30","50"));
+            GenericMethod<int> genericMethod = new GenericMethod<int>(20,30,50);
+            Console.WriteLine(genericMethod.TestMaximum());
             Console.ReadKey();
         }
     }

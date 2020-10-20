@@ -6,97 +6,38 @@ namespace MSTest
     [TestClass]
     public class UnitTest1
     {
-        //TC 1.1
+        /// Unit test cases to test
+        /// the defined method for
+        /// int,float and string type parameters. 
         [TestMethod]
-        public void GivenAtFirstPositionReturnsFirst_INT()
-        {   //Arrange
+        public void TestForGenericType_Int() {
+            //Arrange
+            FindMaximum.GenericMethod<int> generic = new GenericMethod<int>(20, 30, 50);
             int expected = 50;
             //Act
-            int actual = FindMaximum.GenericMethod.GetMaximumInt(50,20,30);
+            int actual =generic.TestMaximum();
             //Assert
             expected.Equals(actual);
         }
-        //TC 1.2
         [TestMethod]
-        public void GivenAtSecondPositionReturnsSecond_INT()
-        {   //Arrange
-            int expected = 50;
-            //Act
-            int actual = FindMaximum.GenericMethod.GetMaximumInt(20, 50,30);
-            //Assert
-            expected.Equals(actual);
-        }
-        //TC 1.3
-        [TestMethod]
-        public void GivenAtThirdPositionReturnsThird_INT()
-        {   //Arrange
-            int expected = 50;
-            //Act
-            int actual = FindMaximum.GenericMethod.GetMaximumInt(20, 30, 50);
-            //Assert
-            expected.Equals(actual);
-        }
-        /// Writing the same test cases
-        /// in case of float parameters
-        //TC 2.1
-        [TestMethod]
-        public void GivenAtFirstPositionReturnsFirst_Float()
-        {   //Arrange
+        public void TestForGenericType_Float()
+        {
+            //Arrange
+            FindMaximum.GenericMethod<float> generic = new GenericMethod<float>(20, 30, 50);
             float expected = 50;
             //Act
-            float actual = FindMaximum.GenericMethod.GetMaximumFloat(50, 20, 30);
+            float actual = generic.TestMaximum();
             //Assert
             expected.Equals(actual);
         }
-        //TC 2.2
         [TestMethod]
-        public void GivenAtSecondPositionReturnsSecond_Float()
-        {   //Arrange
-            float expected = 50;
-            //Act
-            float actual = FindMaximum.GenericMethod.GetMaximumFloat(20, 50, 30);
-            //Assert
-            expected.Equals(actual);
-        }
-        //TC 2.3
-        [TestMethod]
-        public void GivenAtThirdPositionReturnsThird_Float()
-        {   //Arrange
-            float expected = 50;
-            //Act
-            float actual = FindMaximum.GenericMethod.GetMaximumFloat(20, 30, 50);
-            //Assert
-            expected.Equals(actual);
-        }
-        /// Doing the same use cases
-        /// as above in case of string parameters
-        //TC 3.1
-        [TestMethod]
-        public void GivenAtFirstPositionReturnsFirst_String()
-        {   //Arrange
+        public void TestForGenericType_String()
+        {
+            //Arrange
+            FindMaximum.GenericMethod<string> generic = new GenericMethod<string>("20", "30", "50");
             string expected = "50";
             //Act
-            float actual = FindMaximum.GenericMethod.GetMaximumFloat(50, 20, 30);
-            //Assert
-            expected.Equals(actual);
-        }
-        //TC 3.2
-        [TestMethod]
-        public void GivenAtSecondPositionReturnsSecond_String()
-        {   //Arrange
-            string expected = "50";
-            //Act
-            string actual = FindMaximum.GenericMethod.GetMaximumString("20", "50", "30");
-            //Assert
-            expected.Equals(actual);
-        }
-        //TC 3.3
-        [TestMethod]
-        public void GivenAtThirdPositionReturnsThird_String()
-        {   //Arrange
-            string expected = "50";
-            //Act
-            string actual = FindMaximum.GenericMethod.GetMaximumString("20", "30", "50");
+            string actual = generic.TestMaximum();
             //Assert
             expected.Equals(actual);
         }
