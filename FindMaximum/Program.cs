@@ -10,11 +10,11 @@ namespace FindMaximum
         {
             int[] arr = { 10, 20, 30, 40, 50, 60, 70 };
             GenericMethod<int> genericMethod = new GenericMethod<int>(arr);
-            Console.WriteLine(genericMethod.TestMaximum());
+            genericMethod.PrintMax();
             Console.ReadKey();
         }
         public interface IComparable {
-            int TestMaximum();
+            void PrintMax();
         }
     }
 }
