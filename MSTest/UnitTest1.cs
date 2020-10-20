@@ -12,7 +12,8 @@ namespace MSTest
         [TestMethod]
         public void TestForGenericType_Int() {
             //Arrange
-            FindMaximum.GenericMethod<int> generic = new GenericMethod<int>(20, 30, 50);
+            int[] arr = { 10, 20, 30, 40, 50 };
+            FindMaximum.GenericMethod<int> generic = new GenericMethod<int>(arr);
             int expected = 50;
             //Act
             int actual =generic.TestMaximum();
@@ -23,7 +24,8 @@ namespace MSTest
         public void TestForGenericType_Float()
         {
             //Arrange
-            FindMaximum.GenericMethod<float> generic = new GenericMethod<float>(20, 30, 50);
+            float[] arr = { 10, 20, 30, 40, 50 };
+            FindMaximum.GenericMethod<float> generic = new GenericMethod<float>(arr);
             float expected = 50;
             //Act
             float actual = generic.TestMaximum();
@@ -34,7 +36,8 @@ namespace MSTest
         public void TestForGenericType_String()
         {
             //Arrange
-            FindMaximum.GenericMethod<string> generic = new GenericMethod<string>("20", "30", "50");
+            string[] arr = { "10", "20", "30", "40", "50" };
+            FindMaximum.GenericMethod<string> generic = new GenericMethod<string>(arr);
             string expected = "50";
             //Act
             string actual = generic.TestMaximum();
